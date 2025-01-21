@@ -3,7 +3,7 @@ import { RotatingLines } from "react-loader-spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Tema from "../../../models/Tema";
-import { atualizar,buscar,cadastrar } from "../../../service/Service";
+import { atualizar, buscar, cadastrar } from "../../../service/Service";
 
 function FormTema() {
 

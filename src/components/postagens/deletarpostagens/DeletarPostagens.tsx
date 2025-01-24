@@ -4,6 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext"
 import Postagem from "../../../models/Postagem"
 import { buscar,deletar } from "../../../service/Service"
 import { RotatingLines } from "react-loader-spinner"
+import { ToastAlerta } from "../../../util/ToastAlerta"
 
 function DeletarPostagem() {
 
@@ -33,7 +34,7 @@ function DeletarPostagem() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            ToastAlerta('Você precisa estar logado', 'info')
             navigate('/')
         }
     }, [token])

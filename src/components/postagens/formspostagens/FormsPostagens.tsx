@@ -105,13 +105,13 @@ function FormPostagem() {
                     },
                 });
 
-                alert('Postagem atualizada com sucesso')
+                ToastAlerta('Postagem atualizada com sucesso','info')
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar a Postagem')
+                    ToastAlerta('Erro ao atualizar a Postagem', 'Info')
                 }
             }
 
@@ -123,13 +123,13 @@ function FormPostagem() {
                     },
                 })
 
-                alert('Postagem cadastrada com sucesso');
+                ToastAlerta('Postagem cadastrada com sucesso','info');
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
                     handleLogout()
                 } else {
-                    alert('Erro ao cadastrar a Postagem');
+                    ToastAlerta('Erro ao cadastrar a Postagem',  'info');
                 }
             }
         }

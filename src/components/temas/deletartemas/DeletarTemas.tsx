@@ -55,13 +55,13 @@ function DeletarTema() {
                 }
             })
 
-            alert('Tema apagado com sucesso')
+            ToastAlerta('Tema apagado com sucesso', 'info')
 
         } catch (error: any) {
             if (error.toString().includes('403')) {
                 handleLogout()
             }else {
-                alert('Erro ao deletar o tema.')
+                ToastAlerta('Erro ao deletar o tema.', 'info')
             }
         }
 
